@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<table id="table_main">
+<tr>
+	<td>
+		<table id="header">
+		<tr> 
+			<td id="headerlogo"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>logo.gif" alt="INFOphp online" /></a></td>
+			<td id="headerbanner"><{$xoops_banner}>&nbsp;&nbsp;</td>
+        </tr>
+		</table>
+ 		<table>
+        <tr> 
+			<td width="45%" class="clock"><span id="clock"></span> <script language="JavaScript" type="text/javascript" src="<{$xoops_imageurl}>clock.js"></script> &nbsp;</td>
+			<td id="headmenu"><a onmouseover=showit(1) class="menuHead" href="<{$xoops_url}>/index.php">HOME</a></td>
+			<td id="headmenu"><a onmouseover=showit(2) class="menuHead"  href="<{$xoops_url}>/modules/news/">NEWS</a></td>
+			<td id="headmenu"><a onmouseover=showit(3) class="menuHead" href="<{$xoops_url}>/modules/newbb/">FORUM</a></td>
+			<td id="headmenu"><a onmouseover=showit(4) class="menuHead"  href="<{$xoops_url}>/modules/mylinks/">LINKS</a></td>
+			<td id="headmenu"><a onmouseover=showit(5) class="menuHead" href="<{$xoops_url}>/modules/mydownloads/">DOWNLOAD</a></td>
+			<td id="headmenu"><a onmouseover=showit(6) class="menuHead"  href="<{$xoops_url}>/modules/xoopsfaq/">FAQ</a></td>
+			<td id="headmenu"><a onmouseover=showit(7) class="menuHead" href="<{$xoops_url}>/modules/contact/">CONTACT</a></td>
+		</tr>
+		<TR>
+      		<TD id="submenu" colSpan=8 >
+			<DIV width="100%"; padding-left:15px; id=describe onmouseover=clear_delayhide() onmouseout=resetit(event)></DIV>
+			<SCRIPT language=JavaScript1.2>
+				var submenu=new Array()
+				submenu[1]=''
+				submenu[2]='&nbsp;<a href="<{$xoops_url}>/modules/news/">NEWS</a>&nbsp;|&nbsp;<a href="<{$xoops_url}>/modules/news/submit.php">SUBMIT NEWS</a>&nbsp;|&nbsp;<a href="<{$xoops_url}>/modules/news/archive.php">NEWS ARCHIVE</a>&nbsp;'
+				submenu[3]=''
+				submenu[4]='&nbsp;<a href="<{$xoops_url}>/modules/mylinks/submit.php">SUBMIT LINKS</a>&nbsp;|&nbsp;<a href="<{$xoops_url}>/modules/mylinks/topten.php">TOP LINKS</a>&nbsp;</a>'
+				submenu[5]='&nbsp;<a href="<{$xoops_url}>/modules/mydownloads/submit.php">SUBMIT DOWNLOAD</a>&nbsp;|&nbsp;<a href="<{$xoops_url}>/modules/mydownloads/topten.php?hit=1">POPULAR</a>&nbsp;|&nbsp;<a href="<{$xoops_url}>/modules/mydownloads/topten.php?rate=1">TOP RATED</a>&nbsp;'
+				submenu[6]=''
+				submenu[7]='&nbsp;<a href="<{$xoops_url}>/modules/contact/">CONTACT US</a>&nbsp;|&nbsp;<a href="mailto:your@email.com?subject=Contact%20from%20web%20site">SEND EMAIL</a>'
+				var delay_hide=750
+				var menuobj=document.getElementById? document.getElementById("describe") : document.all? document.all.describe : document.layers? document.dep1.document.dep2 : ""
+				function showit(which){
+					clear_delayhide()
+					thecontent=(which==-1)? "" : submenu[which]
+					if (document.getElementById||document.all) menuobj.innerHTML=thecontent
+					else if (document.layers){
+						menuobj.document.write(thecontent)
+						menuobj.document.close()
+					}
+				}
+				function resetit(e){
+					if (document.all&&!menuobj.contains(e.toElement)) delayhide=setTimeout("showit(-1)",delay_hide)
+					else if (document.getElementById&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+						delayhide=setTimeout("showit(-1)",delay_hide)
+				}
+				function clear_delayhide(){
+					if (window.delayhide) clearTimeout(delayhide)
+				}
+				function contains_ns6(a, b) {
+					while (b.parentNode)
+						if ((b = b.parentNode) == a)return true;
+					return false;
+				}
+			</SCRIPT>
+			</TD>
+		</tr>
+		</table>
+		<table>
+		<tr>
+			<td class="headersearch">
+				<form style="margin-top: 2px; margin-bottom: 0px" action="<{$xoops_url}>/search.php" method="post">
+					<input class="button" type="text" name="query" />
+					<input type="hidden" name="action" value="results" />
+					<input name="submit" type="submit" value="Search" />
+				</form>
+			</td>
+		</tr>
+		</table>
+	
+	  	<table>
+		<tr>
+			<td id="leftcolumn">
+				<!-- Start left blocks loop -->
+				<{foreach item=block from=$xoops_lblocks}>
+					<div class="blockTitle"><{$block.title}></div>
+					<div class="blockContent"><{$block.content}></div>
+				<{/foreach}>
+				<!-- End left blocks loop -->
+			</td>
+	
+			<td id="centercolumn">
+				<!-- Display center blocks if any -->
+				<{if $xoops_showcblock == 1}>
+				<table cellspacing="0">
+				<tr>
+					<td id="centerCcolumn" colspan="2">
+						<!-- Start center-center blocks loop -->
+						<{foreach item=block from=$xoops_ccblocks}>
+							<div class="blockTitle"><{$block.title}></div>
+							<div class="blockContent"><{$block.content}></div>
+						<{/foreach}>
+						<!-- End center-center blocks loop -->
+					</td>
+				</tr>
+				<tr>
+					<td id="centerLcolumn">
+						<!-- Start center-left blocks loop -->
+						<{foreach item=block from=$xoops_clblocks}>
+							<div class="blockTitle"><{$block.title}></div>
+							<div class="blockContent"><{$block.content}></div>
+						<{/foreach}>
+						<!-- End center-left blocks loop -->
+					</td>
+					<td id="centerRcolumn">
+						<!-- Start center-right blocks loop -->
+						<{foreach item=block from=$xoops_crblocks}>
+							<div class="blockTitle"><{$block.title}></div>
+							<div class="blockContent"><{$block.content}></div>
+						<{/foreach}>
+						<!-- End center-right blocks loop -->
+					</td>
+				</tr>
+				</table>
+				<{/if}>
+				<!-- End display center blocks -->
+				<div id="content"><{$xoops_contents}></div>
+			</td>
+			
+			<{if $xoops_showrblock == 1}>		
+			<td id="rightcolumn">
+				<!-- Start right blocks loop -->
+				<{foreach item=block from=$xoops_rblocks}>
+					<div class="blockTitle"><{$block.title}></div>
+					<div class="blockContent"><{$block.content}></div>
+				<{/foreach}>
+				<!-- End right blocks loop -->
+			</td>		
+			<{/if}>
+		</tr>
+		</table>
+	
+		<table>
+		<tr id="footerbar"> 
+			<td><{$xoops_footer}></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</body>
+</html>
